@@ -18,9 +18,9 @@ rayon = ["egui-baseview/rayon"]
 [dependencies]
 nih_plug = { path = "..", default-features = false }
 raw-window-handle = "0.5"
-baseview = { git = "https://github.com/TristanCacqueray/baseview.git", rev = "999ef6e4a64515b5e981f932515d4cf02bd85e74" }
+baseview = { git = "https://github.com/TristanCacqueray/baseview.git", rev = "3a81205f2c70b6973f503027060b9355aac41655" }
 crossbeam = "0.8"
-egui-baseview = { git = "https://codeberg.org/TristanCacqueray/egui-baseview.git", rev = "1781fbf23cd915cf2f373485b5181801ac917ca4" }
+egui-baseview = { git = "https://codeberg.org/TristanCacqueray/egui-baseview.git", rev = "3bc260a3a862d38458c64a4637ab10c132ebf23c" }
 parking_lot = "0.12"
 # To make the state persistable
 serde = { version = "1.0", features = ["derive"] }

@@ -677,23 +677,6 @@ dependencies = [
 [[package]]
 name = "baseview"
 version = "0.1.0"
-source = "git+https://github.com/blepfx/baseview.git?rev=042f0c6cbc4a8befdd152f61128a2bd83d7bae12#042f0c6cbc4a8befdd152f61128a2bd83d7bae12"
-dependencies = [
- "cocoa",
- "core-foundation 0.9.4",
- "keyboard-types",
- "nix 0.22.3",
- "objc",
- "raw-window-handle 0.5.2",
- "uuid",
- "winapi",
- "x11",
- "x11rb 0.13.1",
-]
-
-[[package]]
-name = "baseview"
-version = "0.1.0"
 source = "git+https://github.com/RustAudio/baseview.git?rev=1d9806d5bd92275d0d8142d9c9c90198757b9b25#1d9806d5bd92275d0d8142d9c9c90198757b9b25"
 dependencies = [
  "cocoa",
@@ -725,6 +708,24 @@ dependencies = [
  "x11",
  "xcb 0.9.0",
  "xcb-util",
+]
+
+[[package]]
+name = "baseview"
+version = "0.1.0"
+source = "git+https://github.com/TristanCacqueray/baseview.git?rev=3a81205f2c70b6973f503027060b9355aac41655#3a81205f2c70b6973f503027060b9355aac41655"
+dependencies = [
+ "cocoa",
+ "core-foundation 0.9.4",
+ "keyboard-types",
+ "nix 0.22.3",
+ "objc",
+ "raw-window-handle 0.5.2",
+ "uuid",
+ "winapi",
+ "x11",
+ "x11rb 0.13.1",
+ "xkbcommon",
 ]
 
 [[package]]
@@ -1845,9 +1846,9 @@ dependencies = [
 [[package]]
 name = "egui-baseview"
 version = "0.6.0"
-source = "git+https://codeberg.org/BillyDM/egui-baseview.git?rev=319311be815ddfa192400c161afb49c56ba560c1#319311be815ddfa192400c161afb49c56ba560c1"
+source = "git+https://codeberg.org/TristanCacqueray/egui-baseview.git?rev=3bc260a3a862d38458c64a4637ab10c132ebf23c#3bc260a3a862d38458c64a4637ab10c132ebf23c"
 dependencies = [
- "baseview 0.1.0 (git+https://github.com/blepfx/baseview.git?rev=042f0c6cbc4a8befdd152f61128a2bd83d7bae12)",
+ "baseview 0.1.0 (git+https://github.com/TristanCacqueray/baseview.git?rev=3a81205f2c70b6973f503027060b9355aac41655)",
  "copypasta 0.10.1",
  "egui",
  "egui_glow",
@@ -3348,6 +3349,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "memmap2"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "43a5a03cefb0d953ec0be133036f14e109412fa594edc2f77227249db66cc3ed"
+dependencies = [
+ "libc",
+]
+
+[[package]]
 name = "memoffset"
 version = "0.6.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3627,7 +3637,7 @@ dependencies = [
 name = "nih_plug_egui"
 version = "0.0.0"
 dependencies = [
- "baseview 0.1.0 (git+https://github.com/blepfx/baseview.git?rev=042f0c6cbc4a8befdd152f61128a2bd83d7bae12)",
+ "baseview 0.1.0 (git+https://github.com/TristanCacqueray/baseview.git?rev=3a81205f2c70b6973f503027060b9355aac41655)",
  "crossbeam",
  "egui-baseview",
  "nih_plug",
@@ -7142,6 +7152,18 @@ name = "xi-unicode"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a67300977d3dc3f8034dae89778f502b6ba20b269527b3223ba59c0cf393bb8a"
+
+[[package]]
+name = "xkbcommon"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "13867d259930edc7091a6c41b4ce6eee464328c6ff9659b7e4c668ca20d4c91e"
+dependencies = [
+ "as-raw-xcb-connection",
+ "libc",
+ "memmap2 0.8.0",
+ "xkeysym",
+]
 
 [[package]]
 name = "xkbcommon-dl"
